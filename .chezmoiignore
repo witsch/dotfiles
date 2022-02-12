@@ -1,0 +1,8 @@
+/.DS_Store
+/.Trash/
+/.aws/
+/.cache/
+/.docker/
+/.dropbox/
+/.npm/
+/[0-z]*

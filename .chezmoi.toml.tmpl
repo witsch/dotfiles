@@ -1,0 +1,14 @@
+{{- $email := "" -}}
+{{- if (hasKey . "email") -}}
+{{-   $email = .email -}}
+{{- else -}}
+{{-   $email = promptString "email" -}}
+{{- end -}}
+
+encryption = "gpg"
+
+[gpg]
+    recipient = "0x48DD47A9"
+
+[data]
+    email = {{ $email | quote }}

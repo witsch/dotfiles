@@ -4,5 +4,6 @@
 /.cache/
 /.docker/
 /.dropbox/
+/.gnupg/
 /.npm/
 /[0-z]*

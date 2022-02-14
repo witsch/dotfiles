@@ -2,18 +2,24 @@
 
 set autoindent
 set backspace=indent,eol,start
+set cursorline
 set errorbells
+set history=1000
 set hlsearch
 set ignorecase
 set incsearch
+set laststatus=2
 set modelines=1
 set mousehide
 set nowrap
-set scrolloff=2
+set number
+set scrolloff=5
 set showbreak="+++ "
 set showmatch
+set smartcase
+set wildignore=*.jpg,*.png,*.gif,*.pdf,*.pyc
 set wildmenu
-set wildmode=longest,full
+set wildmode=list:longest,full
 set wrapmargin=8
 
 " gui options & font
@@ -47,14 +53,19 @@ autocmd FileType html	setlocal tabstop=2 shiftwidth=2 expandtab smarttab
 highlight rightMargin term=bold ctermfg=blue guifg=blue
 match rightMargin /.\%>81v/
 
+" plugins
+call plug#begin()
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'itchyny/lightline.vim'
+call plug#end()
+
+" goyo & limelight integration
+" see https://github.com/junegunn/limelight.vim
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
 " set nice colors
-" background for normal text is light grey
-" text below the last line is darker grey
-" cursor is green, cyan when ":lmap" mappings are active
-" constants are not underlined but have a slightly lighter background
-highlight Normal guibg=grey90
-highlight Cursor guibg=Green guifg=NONE
-highlight lCursor guibg=Cyan guifg=NONE
-highlight NonText guibg=grey80
-highlight Constant gui=NONE guibg=grey95
-highlight Special gui=NONE guibg=grey95
+color seoul256-light

@@ -12,5 +12,7 @@
 /.psql/db/
 /.psql/history/
 /.tox/distshare/
+/.vim/autoload/
+/.vim/plugged/
 /.viminfo
 /[0-z]*

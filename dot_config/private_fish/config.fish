@@ -5,6 +5,7 @@ if status is-interactive
     # abbrevations
     abbr b brew
     abbr c chezmoi
+    abbr cg chezmoi git
     abbr f fzf
     abbr g git
     abbr j autojump

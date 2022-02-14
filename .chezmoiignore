@@ -12,4 +12,5 @@
 /.psql/db/
 /.psql/history/
 /.tox/distshare/
+/.viminfo
 /[0-z]*

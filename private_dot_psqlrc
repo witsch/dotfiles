@@ -1,0 +1,10 @@
+\set QUIET on
+\set HISTFILE ~/.psql/history/ :DBNAME
+\set HISTSIZE 5000
+\pset border 2
+\pset format wrapped
+\pset linestyle unicode
+\pset null ¤
+\pset pager off
+\timing on
+\conninfo

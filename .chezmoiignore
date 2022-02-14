@@ -9,6 +9,7 @@
 /.local/
 /.mediathek3/
 /.npm/
-/.postgres/
+/.psql/db/
+/.psql/history/
 /.tox/distshare/
 /[0-z]*

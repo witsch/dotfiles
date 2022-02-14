@@ -4,6 +4,11 @@
 /.cache/
 /.docker/
 /.dropbox/
+/.git
 /.gnupg/
+/.local/
+/.mediathek3/
 /.npm/
+/.postgres/
+/.tox/distshare/
 /[0-z]*

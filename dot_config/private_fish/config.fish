@@ -9,6 +9,7 @@ if status is-interactive
     abbr f fzf
     abbr g git
     abbr j autojump
+    abbr p gopass
     abbr pr "pipenv run"
     abbr s ssh
 

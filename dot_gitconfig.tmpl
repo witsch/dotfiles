@@ -1,0 +1,102 @@
+# ~/.gitconfig
+
+[core]
+	excludesfile = ~/.gitignore
+	pager = "less -RciqMSj5"
+	editor = mvim -f
+	quotepath = false
+
+[user]
+	name = Andreas Zeidler
+	email = {{ .email }}
+	signingkey = 48DD47A9
+
+[alias]
+	ai = add --interactive
+	ap = add --patch
+	b = branch --verbose --verbose
+	ba = branch --verbose --verbose --all
+	bc = branch --contains
+	br = branch --verbose --remotes
+	brc = branch --contains --remotes
+	cat = cat-file
+	ci = commit --verbose
+	cia = commit --verbose --amend
+	co = checkout
+	cp = cherry-pick
+	cv = cherry --verbose
+	d = diff
+	dc = diff --cached
+	dn = diff --numstat
+	feta = fetch --all
+	greps = grep --recurse-submodules
+	heads = for-each-ref --format='%(upstream:trackshort)%(refname:short) %(color:green)%(upstream:short) %(color:red)%(upstream:track)' refs/heads
+	l = log
+	l0 = log --format=%s -1
+	l1 = log --oneline --decorate
+	last = for-each-ref --count=5 --sort=-committerdate --format='%(committerdate:short) %(color:blue)%(refname:short) %(color:green)%(upstream:track)' refs/heads
+	last-no-merged = for-each-ref --no-merged main --sort=committerdate --format='%(committerdate:short) %(color:blue)%(refname:short) %(color:green)%(upstream:track)' refs/heads
+	lf = log --follow
+	list-remotes = config --get-regexp ^remote
+	ll = log --patch
+	llf = log --patch --follow
+	lln = log --patch --numstat
+	llp = log --patch --first-parent
+	ln = log --numstat
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	lp = log --first-parent
+	ls = ls-files
+	m = merge --no-ff
+	p = pull --ff
+	pop = stash pop
+	pure = pull --rebase
+	r = remote
+	rbc = rebase --continue
+	rbi = rebase --interactive
+	reha = reset --hard
+	rp = reset --patch
+	s = status --short --branch
+	sha = log -1 --format=format:%h
+	st = status --short --branch
+	stak = stash save --keep-index
+	state = "!git heads | grep -v '^[<=]'; git stash list | cat"
+	stow = stash show --patch
+	stui = status -sbu --ignored
+	sub = submodule
+	sui = submodule update --init
+	tc = tag --contains
+	upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
+	wd = diff --word-diff --color-words
+	wdc = diff --word-diff --color-words --cached
+
+[branch]
+	autosetupmerge = true
+	autosetuprebase = remote
+
+[clean]
+	requireForce = False
+
+[color]
+	diff = auto
+	branch = auto
+	status = auto
+
+[diff]
+	renames = true
+
+[init]
+	defaultBranch = "main"
+
+[merge]
+	log = true
+	conflictstyle = zdiff3
+
+[push]
+	default = current
+
+[rebase]
+	stat = true
+
+[rerere]
+	enabled = true

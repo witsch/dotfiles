@@ -8,7 +8,6 @@ if status is-interactive
     abbr cg chezmoi git
     abbr f fzf
     abbr g git
-    abbr j autojump
     abbr p gopass
     abbr pr "pipenv run"
     abbr s ssh

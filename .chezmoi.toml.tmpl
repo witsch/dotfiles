@@ -15,3 +15,8 @@ encryption = "gpg"
 
 [data]
     email = {{ $email | quote }}
+{{- if contains "zeit.de" $email }}
+    environment = "zon"
+{{- else }}
+    environment = "home"
+{{- end }}

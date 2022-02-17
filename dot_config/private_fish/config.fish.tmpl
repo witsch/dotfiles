@@ -8,6 +8,7 @@ if status is-interactive
     abbr cg chezmoi git
     abbr f fzf
     abbr g git
+    abbr k kubectl
     abbr p gopass
     abbr pr "pipenv run"
     abbr s ssh
@@ -32,4 +33,13 @@ if status is-interactive
     set -gx LESS_ADVANCED_PREPROCESSOR 1
     set -gx HOMEBREW_NO_INSTALL_CLEANUP please_not
     set -gx PIPENV_CACHE_DIR ( pip3 cache dir )
+
+{{- if eq .environment "zon" }}{{ "\n" }}
+    # zon
+    set -gx FASTLY_API_KEY "{{ gopass "zon/keys/fastly" }}"
+    set -gx KITCHEN_PROVIDER "virtualbox"
+    set -gx KUBECONFIG "kube.config:$HOME/.kube/config"
+    set -gx VAULT_ADDR "https://vault.ops.zeit.de/"
+    set -gx ZEIT_WEB_CHROMIUM_BINARY "/usr/local/bin/Chromium"
+{{- end }}
 end

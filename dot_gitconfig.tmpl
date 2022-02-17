@@ -20,6 +20,8 @@
 	br = branch --verbose --remotes
 	brc = branch --contains --remotes
 	cat = cat-file
+	changed = status --porcelain --untracked=no
+	changes = !git log --pretty=format:%h.. -1 CHANGES.* | xargs git log --pretty=format:'- %s%n'
 	ci = commit --verbose
 	cia = commit --verbose --amend
 	co = checkout
@@ -28,6 +30,7 @@
 	d = diff
 	dc = diff --cached
 	dn = diff --numstat
+	egrep = grep -E
 	feta = fetch --all
 	greps = grep --recurse-submodules
 	heads = for-each-ref --format='%(upstream:trackshort)%(refname:short) %(color:green)%(upstream:short) %(color:red)%(upstream:track)' refs/heads
@@ -51,6 +54,8 @@
 	p = pull --ff
 	pop = stash pop
 	pure = pull --rebase
+	# quote / unquote a sh command, see https://stackoverflow.com/a/39616600
+	py2isms = "!git grep \"\\([ (]u[\\\"']\\|class .*(object)\\| six\\|super([^)]\\|__future__\\)\" #"
 	r = remote
 	rbc = rebase --continue
 	rbi = rebase --interactive
@@ -62,11 +67,12 @@
 	stak = stash save --keep-index
 	state = "!git heads | grep -v '^[<=]'; git stash list | cat"
 	stow = stash show --patch
-	stui = status -sbu --ignored
+	stui = status --short --branch --untracked-files --ignored
 	sub = submodule
 	sui = submodule update --init
 	tc = tag --contains
 	upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
+	watch = !git ls-files | xargs fswatch -o | xargs -I@ -n1
 	wd = diff --word-diff --color-words
 	wdc = diff --word-diff --color-words --cached
 
@@ -81,6 +87,9 @@
 	diff = auto
 	branch = auto
 	status = auto
+
+[commit]
+	gpgSign = true
 
 [diff]
 	renames = true
@@ -100,3 +109,9 @@
 
 [rerere]
 	enabled = true
+
+[tag]
+	forceSignAnnotated = true
+
+[trim]
+	filter = merged-local

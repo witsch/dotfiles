@@ -1,0 +1,10 @@
+#!/usr/bin/python
+
+from datetime import datetime
+now = datetime.now()
+hour = now.hour
+minute = round(float(now.minute) / 5) * 5
+if minute == 60:
+    minute = 0
+    hour += 1
+print('%02d:%02d' % (hour, minute))

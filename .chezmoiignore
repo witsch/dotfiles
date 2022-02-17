@@ -6,7 +6,8 @@
 /.dropbox/
 /.git
 /.gnupg/
-/.local/
+/.local/share/
+/.local/venvs/
 /.mediathek3/
 /.npm/
 /.psql/db/

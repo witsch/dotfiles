@@ -27,5 +27,9 @@ if status is-interactive
     set -U FZF_TMUX_HEIGHT "40%"
 
     # misc
+    set -gx LC_CTYPE en_US.UTF-8
+    set -gx LESSOPEN "|/usr/local/bin/lesspipe.sh %s"
+    set -gx LESS_ADVANCED_PREPROCESSOR 1
     set -gx HOMEBREW_NO_INSTALL_CLEANUP please_not
+    set -gx PIPENV_CACHE_DIR ( pip3 cache dir )
 end

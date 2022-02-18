@@ -41,5 +41,9 @@ if status is-interactive
     set -gx KUBECONFIG "kube.config:$HOME/.kube/config"
     set -gx VAULT_ADDR "https://vault.ops.zeit.de/"
     set -gx ZEIT_WEB_CHROMIUM_BINARY "/usr/local/bin/Chromium"
+
+    function fish_mode_prompt -d "display today's working time"
+        echo -n "["(working_time)"] "
+    end
 {{- end }}
 end

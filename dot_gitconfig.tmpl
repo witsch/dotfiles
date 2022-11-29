@@ -21,7 +21,7 @@
 	brc = branch --contains --remotes
 	cat = cat-file
 	changed = status --porcelain --untracked=no
-	changes = !git log --pretty=format:%h.. -1 CHANGES.* | xargs git log --pretty=format:'- %s%n'
+	changes = !git log --pretty=format:%h.. -1 CHANGES.* | xargs git log --first-parent --pretty=format:'- %s%n- %b%n'
 	ci = commit --verbose
 	cia = commit --verbose --amend
 	co = checkout
@@ -37,6 +37,7 @@
 	l = log
 	l0 = log --format=%s -1
 	l1 = log --oneline --decorate
+	l1p = log --oneline --decorate --first-parent
 	last = for-each-ref --count=5 --sort=-committerdate --format='%(committerdate:short) %(color:blue)%(refname:short) %(color:green)%(upstream:track)' refs/heads
 	last-no-merged = for-each-ref --no-merged main --sort=committerdate --format='%(committerdate:short) %(color:blue)%(refname:short) %(color:green)%(upstream:track)' refs/heads
 	lf = log --follow

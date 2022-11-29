@@ -43,6 +43,7 @@ if status is-interactive
     set -gx ZEIT_WEB_CHROMIUM_BINARY "/usr/local/bin/Chromium"
 
     alias chezzon 'chezmoi --source ~/.local/share/chezzon --config ~/.config/chezmoi/chezzon.toml'
+    alias sleepwake 'pmset -g log | egrep " (Sleep|Wake)  "'
 
     function fish_mode_prompt -d "display today's working time"
         echo -n "["(working_time)"] "

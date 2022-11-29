@@ -1,7 +1,8 @@
 autoclip: false
-autoimport: true
+autoimport: false
 cliptimeout: 45
 exportkeys: true
+keychain: false
 mounts: {}
 nopager: false
 notifications: true

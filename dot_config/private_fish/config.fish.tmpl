@@ -6,9 +6,11 @@ if status is-interactive
     abbr b brew
     abbr c chezmoi
     abbr cg chezmoi git
+    abbr caps13 'hidutil property --set \'{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000068}]}\''
     abbr f fzf
     abbr g git
     abbr k kubectl
+    abbr m multipass
     abbr p gopass
     abbr pr "pipenv run"
     abbr s ssh
@@ -41,6 +43,9 @@ if status is-interactive
     set -gx KUBECONFIG "kube.config:$HOME/.kube/config"
     set -gx VAULT_ADDR "https://vault.ops.zeit.de/"
     set -gx ZEIT_WEB_CHROMIUM_BINARY "/usr/local/bin/Chromium"
+
+    abbr find-b 'find ~/ZON/comments ~/ZON/quiz ~/ZON/bitpoll ~/ZON/kickerticker ~/ZON/strassennamen ~/ZON/merkl ~/ZON/zoca ~/ZON/briefkasten-config'
+    abbr tf terraform
 
     alias chezzon 'chezmoi --source ~/.local/share/chezzon --config ~/.config/chezmoi/chezzon.toml'
     alias sleepwake 'pmset -g log | egrep " (Sleep|Wake)  "'

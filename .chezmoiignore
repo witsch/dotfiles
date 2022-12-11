@@ -5,7 +5,11 @@
 /.docker/
 /.dropbox/
 /.git
-/.gnupg/
+/.gnupg/S.*
+/.gnupg/pubring.*
+/.gnupg/secring.*
+/.gnupg/tofu.*
+/.gnupg/trustdb.*
 /.local/share/
 /.local/venvs/
 /.mediathek3/

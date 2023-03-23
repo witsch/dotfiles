@@ -1,4 +1,5 @@
 " ~/.vimrc
+" for initial setup see https://github.com/junegunn/vim-plug
 
 set autoindent
 set backspace=indent,eol,start

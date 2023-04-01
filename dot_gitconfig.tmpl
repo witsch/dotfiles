@@ -2,7 +2,7 @@
 
 [core]
 	excludesfile = ~/.gitignore
-	pager = "less -RciqMSj5"
+	pager = delta
 	editor = mvim -f
 	quotepath = false
 
@@ -94,6 +94,7 @@
 
 [diff]
 	renames = true
+	colorMoved = default
 
 [init]
 	defaultBranch = "main"
@@ -103,7 +104,7 @@
 
 [merge]
 	log = true
-	conflictstyle = zdiff3
+	conflictstyle = diff3
 
 [push]
 	default = current
@@ -121,3 +122,10 @@
 [trim]
 	filter = merged-local
 	bases = main
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true    # use n and N to move between diff sections
+	light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)

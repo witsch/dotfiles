@@ -51,8 +51,10 @@ if status is-interactive
     set -gx ZEIT_WEB_CHROMIUM_BINARY "/usr/local/bin/Chromium"
 
     abbr find-b 'find ~/ZON/comments ~/ZON/quiz ~/ZON/bitpoll ~/ZON/kickerticker ~/ZON/strassennamen ~/ZON/merkl ~/ZON/zoca ~/ZON/briefkasten-config'
+    abbr zg genv --chdir ~/ZON/ git grep --recurse-submodules
     abbr tf terraform
 
+    alias cls="echo -ne '\e[2J\e[3J\e[1;1H'"
     alias chezzon 'chezmoi --source ~/.local/share/chezzon --config ~/.config/chezmoi/chezzon.toml'
     alias sleepwake 'pmset -g log | egrep " (Sleep|Wake)  "'
 

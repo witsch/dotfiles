@@ -91,6 +91,9 @@
 
 [commit]
 	gpgSign = true
+{{- if eq .environment "zon" }}
+	prefixBranches = ^ZO-[0-9]*
+{{- end }}
 
 [delta]
 	navigate = true    # use n and N to move between diff sections

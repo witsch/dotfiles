@@ -92,6 +92,10 @@
 [commit]
 	gpgSign = true
 
+[delta]
+	navigate = true    # use n and N to move between diff sections
+	light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
 [diff]
 	renames = true
 	colorMoved = default
@@ -101,6 +105,9 @@
 {{- if eq .environment "zon" }}
 	templatedir = ~/.config/git/templates
 {{- end }}
+
+[interactive]
+	diffFilter = delta --color-only
 
 [merge]
 	log = true
@@ -122,10 +129,3 @@
 [trim]
 	filter = merged-local
 	bases = main
-
-[interactive]
-	diffFilter = delta --color-only
-
-[delta]
-	navigate = true    # use n and N to move between diff sections
-	light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)

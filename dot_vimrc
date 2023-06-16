@@ -55,15 +55,15 @@ match rightMargin /.\%>81v/
 
 " plugins
 call plug#begin()
+Plug 'airblade/vim-gitgutter'
+Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/seoul256.vim'
-Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'itchyny/lightline.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/seoul256.vim'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-vinegar'
-Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " goyo & limelight integration

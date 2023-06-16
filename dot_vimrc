@@ -73,10 +73,19 @@ autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
 " set base16 colors, see https://github.com/FabioAntunes/base16-fish-shell
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+function s:Base16Colors()
+  if filereadable(expand("~/.vimrc_background"))
+    let base16colorspace=256
+    source ~/.vimrc_background
+  endif
+endfunction
+
+augroup Base16Colors
+  autocmd!
+  autocmd FocusGained * call s:Base16Colors()
+augroup END
+
+call s:Base16Colors()
 
 " fzf plugin shortcuts, see https://github.com/junegunn/fzf
 nnoremap <C-t> :Files<CR>

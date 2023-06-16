@@ -61,8 +61,8 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'junegunn/seoul256.vim'
 Plug 'preservim/nerdtree'
+Plug 'tinted-theming/base16-vim'
 Plug 'tpope/vim-vinegar'
 call plug#end()
 
@@ -71,8 +71,11 @@ call plug#end()
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
-" set nice colors
-color seoul256-light
+" set base16 colors, see https://github.com/FabioAntunes/base16-fish-shell
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 " fzf plugin shortcuts, see https://github.com/junegunn/fzf
 nnoremap <C-t> :Files<CR>

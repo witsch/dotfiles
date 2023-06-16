@@ -27,7 +27,6 @@ set wrapmargin=8
 set antialias
 set enc=utf-8
 set guifont=Monaco:h13
-set termencoding=macroman
 
 " keyboard mappings
 map V {!}par}jz.
@@ -56,11 +55,15 @@ match rightMargin /.\%>81v/
 
 " plugins
 call plug#begin()
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-vinegar'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " goyo & limelight integration
@@ -70,3 +73,11 @@ autocmd! User GoyoLeave Limelight!
 
 " set nice colors
 color seoul256-light
+
+" fzf plugin shortcuts, see https://github.com/junegunn/fzf
+nnoremap <C-t> :Files<CR>
+nnoremap ; :Rg<CR>
+
+" nerdtree integration, see https://github.com/preservim/nerdtree
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>

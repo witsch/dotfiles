@@ -19,10 +19,10 @@
 /.git
 /.gnupg/S.*
 /.gnupg/crls.d/
-/.gnupg/dirmngr.conf
 /.gnupg/openpgp-revocs.d/
 /.gnupg/private-keys-v1.d/
 /.gnupg/pubring.*
+/.gnupg/random_seed
 /.gnupg/reader_0.status
 /.gnupg/secring.*
 /.gnupg/tofu.*

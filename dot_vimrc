@@ -58,6 +58,7 @@ match rightMargin /.\%>81v/
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'chriskempson/base16-vim'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'

@@ -57,6 +57,10 @@ if status is-interactive
     abbr tf terraform
     abbr tg terragrunt
 
+    abbr 9d k9s --context gke_zeitonline-main_europe-west3-a_devel
+    abbr 9s k9s --context gke_zeitonline-main_europe-west3-a_staging
+    abbr 9p k9s --context gke_zeitonline-main_europe-west3-a_production
+
     alias cls="echo -ne '\e[2J\e[3J\e[1;1H'"
     alias chezzon 'chezmoi --source ~/.local/share/chezzon --config ~/.config/chezmoi/chezzon.toml'
     alias sleepwake 'pmset -g log | egrep " (Sleep|Wake)  "'

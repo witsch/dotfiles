@@ -5,9 +5,13 @@
 /.cargo/
 /.config/btop/
 /.config/chezmoi/
+/.config/fish/conf.d/zon.fish
 /.config/fish/fish_variables
 /.config/fish/functions/fundle.fish
 /.config/fish/fundle/
+/.config/gcloud/
+/.config/git/templates/hooks/prepare-commit-msg
+/.config/helm/
 /.config/iterm2/
 /.config/mackup/
 /.docker/

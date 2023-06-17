@@ -52,7 +52,7 @@ if status is-interactive
     set -gx VAULT_ADDR "https://vault.ops.zeit.de/"
     set -gx ZEIT_WEB_CHROMIUM_BINARY "/usr/local/bin/Chromium"
 
-    abbr find-b 'find ~/ZON/comments ~/ZON/quiz ~/ZON/bitpoll ~/ZON/kickerticker ~/ZON/strassennamen ~/ZON/merkl ~/ZON/zoca ~/ZON/briefkasten-config'
+    abbr zl genv --chdir ~/ZON/ git ls --recurse-submodules
     abbr zg genv --chdir ~/ZON/ git grep --recurse-submodules
     abbr tf terraform
     abbr tg terragrunt

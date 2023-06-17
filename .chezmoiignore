@@ -3,6 +3,7 @@
 /.asdf/
 /.cache/
 /.cargo/
+/.config/mackup/
 /.docker/
 /.dropbox/
 /.git

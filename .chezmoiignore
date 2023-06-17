@@ -36,6 +36,8 @@
 /.pg_service.conf
 /.pg_services/
 /.psql/
+/.ssh/google_compute_*
+/.ssh/known_hosts
 /.tool-versions
 /.vault-token
 /.vim/.netrwhist

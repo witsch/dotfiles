@@ -1,0 +1,49 @@
+# ~/.ssh/ssh_config
+
+Host localhost
+    NoHostAuthenticationForLocalhost yes
+    Compression no
+
+Host fitze f
+    Hostname fitze.pyfidelity.com
+    AddressFamily inet
+    User root
+
+Host zitc z
+    Hostname 10.0.2.13
+    ProxyCommand ssh -W %h:%p fitze
+    LocalForward 8888 localhost:8888
+
+Host witsch w
+    Hostname 148.251.252.131
+    User root
+
+Host thorsten t
+    Hostname v2202301190876213924.hotsrv.de
+
+Host webserver
+    Hostname 10.129.7.9
+    ProxyCommand ssh -W %h:%p thorsten
+
+Host pik
+    Hostname aix.pik-potsdam.de
+
+Host se62 se94 se121
+    Hostname %h.pik-potsdam.de
+    ProxyCommand ssh -W %h:%p pik
+    LocalForward 8080 localhost:8080
+
+Host *.zeit.de
+    User witsch
+    StrictHostKeyChecking no
+
+Host jumphost
+    Hostname storage-jumphost
+    ProxyCommand gcloud compute ssh %h --zone europe-west3-a --project zeitonline-main --ssh-flag="-A -W localhost:%p"
+    User andreas_zeidler_apps_zeit_de
+
+Host *
+    PasswordAuthentication no
+    ForwardAgent yes
+    Compression yes
+    ServerAliveInterval 60

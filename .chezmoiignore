@@ -3,10 +3,12 @@
 /.asdf/
 /.cache/
 /.cargo/
+/.config/broot/
 /.config/btop/
 /.config/chezmoi/
 /.config/fish/conf.d/zon.fish
 /.config/fish/fish_variables
+/.config/fish/functions/br.fish
 /.config/fish/functions/fundle.fish
 /.config/fish/fundle/
 /.config/gcloud/

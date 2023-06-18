@@ -3,9 +3,9 @@
 
 if not status is-interactive
   # plugin functions used for preview must always be available
-  for plugin in 'patrickf1/fzf.fish'
-    set -ax fish_function_path $__fish_config_dir/fundle/$plugin/functions
-  end
+  set -ax fish_function_path $__fish_config_dir/fundle/patrickf1/fzf.fish/functions
+  set -ax fish_function_path $__fish_config_dir/fundle/gazorby/fifc/functions
+  source $__fish_config_dir/fundle/gazorby/fifc/conf.d/fifc.fish
   exit
 end
 
@@ -16,6 +16,7 @@ end
 fundle plugin 'danhper/fish-fastdir'
 fundle plugin 'fabioantunes/base16-fish-shell'
 fundle plugin 'franciscolourenco/done'
+fundle plugin 'gazorby/fifc'
 fundle plugin 'jethrokuan/z'
 fundle plugin 'jorgebucaran/hydro'
 fundle plugin 'jorgebucaran/spark.fish'

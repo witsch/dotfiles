@@ -17,10 +17,12 @@ fundle plugin 'danhper/fish-fastdir'
 fundle plugin 'fabioantunes/base16-fish-shell'
 fundle plugin 'franciscolourenco/done'
 fundle plugin 'gazorby/fifc'
+fundle plugin 'halostatue/fish-macos'
 fundle plugin 'jethrokuan/z'
 fundle plugin 'jorgebucaran/hydro'
 fundle plugin 'jorgebucaran/spark.fish'
 fundle plugin 'nickeb96/puffer-fish'
 fundle plugin 'patrickf1/fzf.fish'
+fundle plugin 'wfxr/forgit'
 
 fundle init

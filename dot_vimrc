@@ -71,8 +71,8 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'lstwn/broot.vim'
 Plug 'preservim/nerdtree'
-Plug 'tpope/vim-vinegar'
 call plug#end()
 
 " goyo & limelight integration
@@ -116,6 +116,13 @@ function! FzyCommand(choice_command, vim_command)
   endif
 endfunction
 
+" fzy integration
 nnoremap <leader>e :call FzyCommand("ag . --silent -l -g ''", ":e")<cr>
 nnoremap <leader>v :call FzyCommand("ag . --silent -l -g ''", ":vs")<cr>
 nnoremap <leader>s :call FzyCommand("ag . --silent -l -g ''", ":sp")<cr>
+
+" broot integration
+let g:broot_default_conf_path = expand('~/.config/broot/conf.hjson')
+nnoremap <silent> <leader>b :BrootHomeDir<CR>
+nnoremap <silent> <C-b> :BrootWorkingDir<CR>
+nnoremap <silent> - :BrootCurrentDir<CR>

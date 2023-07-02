@@ -100,8 +100,8 @@ nnoremap <C-t> :Files<CR>
 nnoremap ; :Rg<CR>
 
 " nerdtree integration, see https://github.com/preservim/nerdtree
-nnoremap <C-n> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
 
 " fzy integration, see https://github.com/jhawthorn/fzy#use-with-vim
 function! FzyCommand(choice_command, vim_command)

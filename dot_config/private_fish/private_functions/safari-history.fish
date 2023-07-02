@@ -5,8 +5,7 @@ function safari-history
              I.url, V.title
          FROM history_visits V
          LEFT JOIN history_items I on V.history_item = I.id
-         ORDER BY visit_time DESC
-         LIMIT 5000; ' |\
+         ORDER BY visit_time DESC; ' |\
     sqlite3 -header -csv ~/Library/Safari/History.db |\
     csview --style=none --no-headers |\
     fzf --layout=reverse-list --exact

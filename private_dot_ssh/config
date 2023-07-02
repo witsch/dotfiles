@@ -24,6 +24,7 @@ Host thorsten t
 Host webserver
     Hostname 10.129.7.9
     ProxyCommand ssh -W %h:%p thorsten
+    User root
 
 Host pik
     Hostname aix.pik-potsdam.de

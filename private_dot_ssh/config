@@ -21,9 +21,19 @@ Host witsch w
 Host thorsten t
     Hostname v2202301190876213924.hotsrv.de
 
+Host git
+    Hostname git.zitc.de
+    User git
+
 Host webserver
     Hostname 10.129.7.9
     ProxyCommand ssh -W %h:%p thorsten
+    User root
+
+Host resilio
+    Hostname 10.129.7.204
+    ProxyCommand ssh -W %h:%p thorsten
+    LocalForward 8888 localhost:8888
     User root
 
 Host pik

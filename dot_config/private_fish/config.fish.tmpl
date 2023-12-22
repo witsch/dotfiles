@@ -42,7 +42,9 @@ if status is-interactive
     set -gx LESS_ADVANCED_PREPROCESSOR 1
     set -gx HOMEBREW_NO_INSTALL_CLEANUP please_not
     set -gx PIPENV_CACHE_DIR ( pip3 cache dir )
-    set -gx SSH_AUTH_SOCK ( gpgconf --list-dirs agent-ssh-socket )
+    if test -e ( gpgconf --list-dirs agent-ssh-socket )
+        set -gx SSH_AUTH_SOCK ( gpgconf --list-dirs agent-ssh-socket )
+    end
 
 {{- if eq .environment "zon" }}{{ "\n" }}
     # zon

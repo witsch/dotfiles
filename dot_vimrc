@@ -124,5 +124,4 @@ nnoremap <leader>s :call FzyCommand("ag . --silent -l -g ''", ":sp")<cr>
 " broot integration
 let g:broot_default_conf_path = expand('~/.config/broot/conf.hjson')
 nnoremap <silent> <leader>b :BrootHomeDir<CR>
-nnoremap <silent> <C-b> :BrootWorkingDir<CR>
 nnoremap <silent> - :BrootCurrentDir<CR>

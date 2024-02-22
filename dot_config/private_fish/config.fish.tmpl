@@ -79,4 +79,10 @@ if status is-interactive
     if functions -q fzf_configure_bindings
         fzf_configure_bindings --directory=\ct --git_log=\cg --git_status=\cs
     end
+
+    # "command not found", see github.com/homebrew/homebrew-command-not-found
+    set HB_CNF_HANDLER (brew --repository)"/Library/Taps/homebrew/homebrew-command-not-found/handler.fish"
+    if test -f $HB_CNF_HANDLER
+       source $HB_CNF_HANDLER
+    end
 end

@@ -15,7 +15,7 @@ if status is-interactive
     abbr p gopass
     abbr pc gopass show -c
     abbr po gopass otp -c
-    abbr pr "pipenv run"
+    abbr pr pipenv run
     abbr s ssh
 
     # abbrevations for bluetooh convenience
@@ -65,6 +65,8 @@ if status is-interactive
     abbr 9s k9s --context gke_zeitonline-main_europe-west3-a_staging
     abbr 9p k9s --context gke_zeitonline-main_europe-west3-a_production
 
+    alias e="exa --all --classify --color-scale --git"
+    alias l="exa --all --classify --color-scale --git --long"
     alias cls="echo -ne '\e[2J\e[3J\e[1;1H'"
     alias chezzon 'chezmoi --source ~/.local/share/chezzon --config ~/.config/chezmoi/chezzon.toml'
     alias sleepwake 'pmset -g log | egrep " (Sleep|Wake)  "'

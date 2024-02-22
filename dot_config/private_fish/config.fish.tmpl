@@ -50,6 +50,7 @@ if status is-interactive
 
 {{- if eq .environment "zon" }}{{ "\n" }}
     # zon
+    set -gx COMPOSE_FILE "testing.yaml"
     set -gx FASTLY_API_KEY "{{ gopass "zon/keys/fastly" }}"
     set -gx KITCHEN_PROVIDER "virtualbox"
     set -gx KUBECONFIG "kube.config:$HOME/.kube/config"

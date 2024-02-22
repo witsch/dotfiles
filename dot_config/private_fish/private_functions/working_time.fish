@@ -1,5 +1,5 @@
 function working_time
-    set -l source ~/Sync/arbeitszeiten.txt
+    set -l source ~/.worktimes/zon.txt
     set -l update ~/.config/fish/functions/duration.py
 
     set -l now ( date +%H:%M )

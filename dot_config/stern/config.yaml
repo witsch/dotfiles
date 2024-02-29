@@ -1,0 +1,4 @@
+# see https://github.com/stern/stern#config-file
+
+only-log-lines: true
+timestamps: short

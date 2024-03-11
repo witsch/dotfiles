@@ -4,20 +4,6 @@ Host localhost
     NoHostAuthenticationForLocalhost yes
     Compression no
 
-Host fitze f
-    Hostname fitze.pyfidelity.com
-    AddressFamily inet
-    User root
-
-Host zitc z
-    Hostname 10.0.2.13
-    ProxyCommand ssh -W %h:%p fitze
-    LocalForward 8888 localhost:8888
-
-Host witsch w
-    Hostname 148.251.252.131
-    User root
-
 Host thorsten t
     Hostname v2202301190876213924.hotsrv.de
 

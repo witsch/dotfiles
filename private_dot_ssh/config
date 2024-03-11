@@ -48,11 +48,6 @@ Host *.zeit.de
     User witsch
     StrictHostKeyChecking no
 
-Host jumphost
-    Hostname storage-jumphost
-    ProxyCommand gcloud compute ssh %h --zone europe-west3-a --project zeitonline-main --ssh-flag="-A -W localhost:%p"
-    User andreas_zeidler_apps_zeit_de
-
 Host *
     PasswordAuthentication no
     ForwardAgent yes

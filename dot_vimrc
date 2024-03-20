@@ -77,6 +77,10 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'lstwn/broot.vim'
 Plug 'preservim/nerdtree'
+Plug 'ruanyl/vim-gh-line'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'evanleck/vim-svelte'
 call plug#end()
 
 " goyo & limelight integration

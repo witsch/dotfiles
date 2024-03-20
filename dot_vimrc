@@ -81,7 +81,12 @@ Plug 'ruanyl/vim-gh-line'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'evanleck/vim-svelte'
+Plug 'liuchengxu/vim-which-key'
 call plug#end()
+
+" which-key integration
+nnoremap <silent> <leader> :<c-u>WhichKey '<leader>'<CR>
+set timeoutlen=500
 
 " goyo & limelight integration
 " see https://github.com/junegunn/limelight.vim

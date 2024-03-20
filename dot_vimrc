@@ -50,6 +50,9 @@ autocmd FileType py	setlocal tabstop=4 shiftwidth=4 expandtab smarttab
 autocmd FileType css	setlocal tabstop=2 shiftwidth=2 expandtab smarttab
 autocmd FileType html	setlocal tabstop=2 shiftwidth=2 expandtab smarttab
 
+" language abbreviations
+autocmd FileType python iabbrev pdb breakpoint()
+
 " highlight columns 80+
 highlight rightMargin term=bold ctermfg=blue guifg=blue
 match rightMargin /.\%>81v/

@@ -35,7 +35,8 @@
 	feta = fetch --all
 	greps = grep --recurse-submodules
 	heads = for-each-ref --format='%(upstream:trackshort)%(refname:short) %(color:green)%(upstream:short) %(color:red)%(upstream:track)' refs/heads
-	l = log --graph --pretty=format:'%C(yellow)%h%C(reset) %G? %C(bold blue)%an%C(reset) %s%C(bold cyan)%d%C(reset) %C(green)%ar.%C(reset)%+b'
+	l = log --pretty=format:'%C(yellow)%h%C(reset) %G? %C(bold blue)%an%C(reset) %s%C(bold cyan)%d%C(reset) %C(green)%ar.%C(reset)%w(0,11,11)%+b'
+	lg = l --graph
 	l0 = log --format=%s -1
 	l1 = log --oneline --decorate
 	l1p = log --oneline --decorate --first-parent

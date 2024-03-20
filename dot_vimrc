@@ -22,7 +22,7 @@ set termguicolors
 set wildignore=*.jpg,*.png,*.gif,*.pdf,*.pyc
 set wildmenu
 set wildmode=list:longest,full
-set wrapmargin=8
+set wrapmargin=0
 
 " gui options & font
 set antialias

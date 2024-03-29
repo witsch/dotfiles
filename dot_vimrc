@@ -101,12 +101,12 @@ function s:Base16Colors()
   endif
 endfunction
 
-augroup Base16Colors
-  autocmd!
-  autocmd FocusGained * call s:Base16Colors()
-augroup END
-
+" base16 colors
 call s:Base16Colors()
+
+" highlight 'overflow', see https://superuser.com/a/519629
+highlight OverLength ctermbg=darkred guibg=#592929
+call matchadd('OverLength', '\%>80v.\+')
 
 " fzf plugin shortcuts, see https://github.com/junegunn/fzf
 nnoremap <C-t> :Files<CR>

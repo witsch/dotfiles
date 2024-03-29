@@ -32,6 +32,7 @@ if status is-interactive
     # augmented tab completion (via github.com/gazorby/fifc)
     set -U eza_opts --all --long --classify --color always --color-scale --git
     set -U fifc_editor vim
+    set -U fifc_fd_opts --hidden
     set -U fifc_bat_opts --number
     set -U fifc_exa_opts $eza_opts
     # extra keybindings (via github.com/patrickf1/fzf.fish)
@@ -42,6 +43,7 @@ if status is-interactive
     # misc
     set -gx BAT_THEME zenburn
     set -gx LC_CTYPE en_US.UTF-8
+    set -gx LESS "--clear-screen --ignore-case --quiet --long-prompt --chop-long-lines --jump-target=5"
     set -gx LESSOPEN "|lesspipe.sh %s"
     set -gx LESS_ADVANCED_PREPROCESSOR 1
     set -gx HOMEBREW_NO_INSTALL_CLEANUP please_not

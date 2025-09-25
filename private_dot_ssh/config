@@ -25,7 +25,7 @@ Host resilio
 Host pik
     Hostname aix.pik-potsdam.de
 
-Host se62 se94 se121
+Host se62 se94 se121 se157 se152
     Hostname %h.pik-potsdam.de
     ProxyCommand ssh -W %h:%p pik
     LocalForward 8080 localhost:8080

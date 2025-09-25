@@ -35,6 +35,10 @@ map <F2> /\(^>.*\\|\.\.\.\\|:\.\.\\|\.\.:\)/<CR>
 map <F3> mtj!?:$<CR>register-time<CR>'t
 map <F4> :r!now<CR>
 
+" window sizing shortcuts
+map <C-Bslash> <C-W>\|
+map <C-=> <C-W>=
+
 " make shift-insert work like in xterm
 map <S-Insert> <MiddleMouse>
 map! <S-Insert> <MiddleMouse>

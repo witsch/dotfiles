@@ -30,7 +30,7 @@ set enc=utf-8
 set guifont=Monaco:h13
 
 " keyboard mappings
-map V {!}par}jz.
+map <C-P> {!}par}jz.
 map <F2> /\(^>.*\\|\.\.\.\\|:\.\.\\|\.\.:\)/<CR>
 map <F3> mtj!?:$<CR>register-time<CR>'t
 map <F4> :r!now<CR>
